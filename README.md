@@ -1,4 +1,6 @@
-# PokéAPI
+# Pokedex
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+
 
 ## Visão Geral
 Este projeto é uma aplicação web que permite aos usuários buscar e visualizar informações detalhadas sobre Pokémon usando a PokeAPI. Os usuários podem pesquisar Pokémon por nome, tipo e estatísticas, além de visualizar detalhes como altura, peso, habilidades e muito mais.
