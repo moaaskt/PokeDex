@@ -38,29 +38,35 @@
                 </li>
                 
                 <li class="nav-item dropdown">               
-                        <div class="advanced-search">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Pesquisa avançada
                       </a>
                       <ul class="dropdown-menu dropdown-menu-dark">
-                        <div class="advanced-searchs">
-                            <label for="statSelect">Stat:</label>
-                            <select id="statSelect">
-                                <!-- Opções para estatísticas -->
-                            </select>
-                            <label for="comparisonSelect">Comparison:</label>
-                            <select id="comparisonSelect">
-                                <option value="=">=</option>
-                                <option value=">">></option>
-                                <option value="<"><</option>
-                            </select>
-                            <label for="valueInput">Value:</label>
-                            <input type="number" id="valueInput">
-                            <button id="filterButton" class="btn btn-primary">Filter</button>
-                        </div>
-                        
-                       
+                    
+                        <div class="stat-filter">
+                          <label for="statSelect">Stat:</label>
+                          <select id="statSelect">
+                              <!-- Opções para estatísticas -->
+                              <option value="hp">HP</option>
+                              <option value="attack">Attack</option>
+                              <option value="defense">Defense</option>
+                              <option value="special-attack">Special Attack</option>
+                              <option value="special-defense">Special Defense</option>
+                              <option value="speed">Speed</option>
+                          </select>
+                          <label for="comparisonSelect">Comparison:</label>
+                          <select id="comparisonSelect">
+                              <option value="=">=</option>
+                              <option value=">">></option>
+                              <option value="<"><</option>
+                          </select>
+                          <label for="valueInput">Value:</label>
+                          <input type="number" id="valueInput">
+                          <button id="filterButton" class="btn btn-primary">Filter</button>
+                      </div>
+                      
                     </ul>
+                    
                 <li class="nav-item dropdown">               
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Pesquisar por tipo
@@ -70,15 +76,15 @@
                         <!-- ... (outros elementos do filtro avançado) ... -->
                         <label for="pokemonType">Type:</label>
                         <select id="pokemonType">
-                            <option value="#">All</option>
+                            <option value="all">All</option>
                             <option value="grass">Grass</option>
                             <option value="fire">Fire</option>
                             <option value="water">Water</option>
                             <!-- Adicione mais tipos aqui -->
                         </select>
-                        <button id="advancedSearchButton" class="btn btn-primary">Search</button>
+                        <button id="advancedSearchButton"  class="btn btn-primary">Search</button>
                     </div>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  
                 </ul>
             </li>
             <form class="d-flex mt-3" role="search">
@@ -111,8 +117,7 @@
                 
         </div>
 
-     <script src="assets/filter.js"></script>
-<script src="assets/search.js"></script>
+ 
     <script src="assets/script.js"></script>
 </body>
 </html>
