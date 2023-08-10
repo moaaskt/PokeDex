@@ -23,5 +23,6 @@ A aplicação utiliza a [PokeAPI](https://pokeapi.co/) para buscar informações
 Este projeto encontra-se em desenvolvimento ativo. Novos recursos e melhorias podem ser adicionados no futuro para aprimorar a experiência do usuário.
 
 ## Licença
-Este projeto está sob a Licença MIT. Para mais detalhes, consulte o arquivo [LICENSE](LICENSE).
+Este projeto está sob a Licença MIT. Para mais detalhes, consulte o arquivo [LICENSE](LICENSE). <br>
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
