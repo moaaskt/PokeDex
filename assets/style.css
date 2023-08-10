@@ -67,6 +67,13 @@ body {
     align-items: center;
     transition: 0.5s;
 }
+.navbar-brand{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(243, 243, 243);
+}
+
 
 .pokemon-card:hover .img-box {
     top: -100px;
