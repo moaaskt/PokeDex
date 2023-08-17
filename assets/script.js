@@ -6,7 +6,7 @@ const loadMoreButton = document.querySelector('#load-more');
 
 
 
-// Função principal para carregar Pokémon
+// Função para carregar mais Pokémon ao rolar a página
 async function loadMorePokemons() {
     currentPage++;
     await displayAllPokemonInfo();
