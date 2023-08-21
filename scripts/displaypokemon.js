@@ -49,14 +49,13 @@ function displayPokemonInfo(pokemon) {
         <p>Weight: ${pokemon.weight} hectograms</p>
      
         <a href="#" class="read-more">Read more</a>
+
+        
     `;
     pokemonCard.appendChild(content);
 
     pokemonContainer.appendChild(pokemonCard);
 }
-
-
-
 
 
 // Função assíncrona que exibe informações de todos os Pokémon
@@ -71,6 +70,19 @@ async function displayAllPokemonInfo() {
         displayPokemonInfo(pokemonData);
     });
 }
+
+// Obter os cards de Pokémon
+const pokemonCards = document.querySelectorAll('.pokemon-card');
+
+// Associar o botão "Read more" a abrir o modal
+pokemonCards.forEach(card => {
+    const readMoreButton = card.querySelector('.read-more');
+    readMoreButton.addEventListener('click', () => {
+        const pokemonName = card.querySelector('.pokemon-name').textContent;
+        const pokemonData = getPokemonDataByName(pokemonName);
+        openModal(pokemonData);
+    });
+});
 
 
 

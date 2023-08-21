@@ -38,13 +38,22 @@
 
         
         <div class="pokemon-container">
+       
           <p id="not-found" style="display: none;">Pokémon não encontrado</p>
 
-          
+          <div id="pokemon-modal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="modal-pokemon-name"></h2>
+                <div id="modal-pokemon-details"></div>
+            </div>
+        </div>
+        
 
             <!-- Aqui serão exibidas as informações do pokémon -->
         </div>
     </div>
+    <script src="scripts/modal.js"></script>
     <script src="scripts/displaypokemon.js"></script>
     <script src="scripts/scrollhandler.js"></script>
     <script src="scripts/searchInput.js"></script>
