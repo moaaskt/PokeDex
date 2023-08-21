@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeAPI Interface</title>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-     
-        <h1><img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt=""></h1>
+      <h1><img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt=""></h1>
+      <input type="text" id="search-input" placeholder="Search Pokémon">
+      <div class="filter-container">
+        <label for="type-filter">Filtrar por tipo:</label>
+        <select id="type-filter">
+            <option value="">Todos</option>
+            <option value="normal">Normal</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <!-- Adicione todas as opções de tipo aqui -->
+        </select>
+    </div>
+
+        
         <div class="pokemon-container">
-          <div class="pokemon-list"></div>
+          <p id="not-found" style="display: none;">Pokémon não encontrado</p>
+
+          
 
             <!-- Aqui serão exibidas as informações do pokémon -->
         </div>
     </div>
     <script src="scripts/displaypokemon.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/scrollhandler.js"></script>
+    <script src="scripts/searchInput.js"></script>
+
 
 </body>
 </html>

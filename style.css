@@ -13,10 +13,10 @@ body {
 }
 
 .pokemon-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cards em várias fileiras */
+    gap: 20px; /* Espaçamento entre os cards */
+}   
 
 .pokemon-info {
     width: 200px;
@@ -27,3 +27,118 @@ body {
     text-align: center;
 }
 
+/* Mantenha suas regras CSS existentes... */
+.pokemon-card .content h2 {
+    margin-top: 10px; /* Espaçamento para o nome do Pokémon */
+}
+
+/* Adicione uma classe para os cards dos Pokémon */
+.pokemon-card {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+.pokemon-card:hover {
+    height: 400px;
+}
+
+.pokemon-card .img-box {
+    position: absolute;
+    width: 250px;
+    height: 250px; /* Mantenha a altura igual à largura para manter a proporção */
+    top: 0px;
+    transition: 0.5s;
+    overflow: hidden; /* Evita que a imagem seja cortada se for maior que o contêiner */
+}
+
+.pokemon-card:hover .img-box {
+    top: -120px;
+    scale: 0.75;
+}
+
+.pokemon-card .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Redimensiona a imagem para cobrir o contêiner */
+    object-position: center; /* Centraliza a imagem no contêiner */
+}
+.pokemon-card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduz o espaçamento entre os elementos */
+    position: absolute;
+    top: 250px;
+    width: 76%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 0; /* Começa com altura zero */
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+
+.pokemon-card:hover .content {
+    top: 130px;
+    height: auto; /* Define altura automática para exibir o conteúdo */
+ 
+    
+}
+
+
+.pokemon-card .read-more {
+    margin-top: auto; /* Empurra o botão para baixo */
+    background: linear-gradient(90deg, #3730a3, #7e22ce);
+    padding: 8px 12px; /* Ajusta o espaçamento do botão */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease; /* Efeito de transição suave */
+    
+}
+/* Estilo básico para o input de pesquisa */
+#search-input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Efeito de destaque quando o input é focado */
+#search-input:focus {
+    outline: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilizando o placeholder */
+#search-input::placeholder {
+    color: #999;
+}
+
+/* Estilo para a mensagem de "Pokémon não encontrado" */
+#not-found {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
