@@ -82,7 +82,7 @@ body {
 .pokemon-card .content {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Reduz o espaçamento entre os elementos */
+    gap: 7px; /* Reduz o espaçamento entre os elementos */
     position: absolute;
     top: 250px;
     width: 76%;
@@ -116,6 +116,8 @@ body {
 #search-input {
     padding: 10px;
     border: none;
+    margin-top: 4px;
+    margin-bottom: 5px;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 16px;
@@ -142,3 +144,57 @@ body {
     font-size: 14px;
     margin-top: 5px;
 }
+.pokemon-type {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+}
+/* Estilos para o container dos filtros */
+.filter-container {
+    margin-bottom: 83px;
+    margin-top: 2px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para os checkboxes */
+.type-filter-label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.type-filter-label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.type-filter-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.type-filter-input:checked + .type-filter-label::before {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Estilos para destacar os checkboxes selecionados */
+.type-filter-label:hover::before {
+    border-color: #007bff;
+}
+
+.type-filter-input:checked + .type-filter-label:hover::before {
+    background-color: #0056b3;
+}
+

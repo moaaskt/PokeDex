@@ -29,8 +29,9 @@ function displayPokemonInfo(pokemon) {
     const pokemonCard = document.createElement('div');
     pokemonCard.classList.add('pokemon-card');
     const types = pokemon.types.map(type => type.type.name).join(' ');
-    pokemonCard.dataset.type = types;   // Assume que o tipo é o primeiro na lista
-
+    pokemonCard.dataset.types = types;
+     // Assume que o tipo é o primeiro na lista
+     
     const imgBox = document.createElement('div');   
     imgBox.classList.add('img-box');
     const img = document.createElement('img');
@@ -42,12 +43,13 @@ function displayPokemonInfo(pokemon) {
     const content = document.createElement('div');
     content.classList.add('content');
     content.innerHTML = `
-    <h2 class="pokemon-name">${pokemon.name}</h2>
-    <p>Height: ${pokemon.height} decimetres</p>
-    <p>Weight: ${pokemon.weight} hectograms</p>
-    <p>Abilities: ${pokemon.abilities.map(ability => ability.ability.name).join(', ')}</p>
-    <a href="#" class="read-more">Read more</a>
-`;
+        <h2 class="pokemon-name">${pokemon.name}</h2>
+        <p>Type: ${types}</p> <!-- Adicione a informação do tipo aqui -->
+        <p>Height: ${pokemon.height} decimetres</p>
+        <p>Weight: ${pokemon.weight} hectograms</p>
+     
+        <a href="#" class="read-more">Read more</a>
+    `;
     pokemonCard.appendChild(content);
 
     pokemonContainer.appendChild(pokemonCard);
