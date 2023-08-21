@@ -2,152 +2,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #ffcd05cc;
 }
 
 .container {
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 20px;
-    margin-top: 60px; /* Adicione um espaçamento superior aqui */
-}
-
-.pokemon-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.pokemon-list .list-group-item {
-    flex: 0 0 calc(33.33% - 20px);
-    margin: 10px;
-    padding: 10px;
     text-align: center;
-    border: 1px solid #ccc;
-    background-color: #fff;
 }
-.pokemon-list {
+
+.pokemon-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-    margin-top: 70px; /* Adicione um espaçamento entre a barra de navegação e os cards */
-}
-
-.pokemon-card {
-    display: flex;
     justify-content: center;
-    width: 350px;
-    height: 300px;
-    position: relative;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
-    transition: 0.5s;
-    margin-bottom: 20px; /* Adicione um espaçamento entre os cards */
-}
-
-.pokemon-card:hover {
-    height: 400px;
-}
-.not-found-message {
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    color: rgb(15, 15, 15); /* Cor do texto */
-    margin-top: 10px; /* Espaçamento acima da mensagem */
-}
-
-
-.pokemon-card .img-box {
-    position: absolute;
-    width: 250px;
-    height: auto;
-    top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-}
-.pokemon-types {
-    font-size: 14px;
-    font-weight: bold;
-    color: #777;
-    margin-bottom: 5px;
-}
-.navbar-brand{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    color: rgb(243, 243, 243);
-}
-
-
-.pokemon-card:hover .img-box {
-    top: -100px;
-    scale: 0.75;
-}
-
-.pokemon-card .img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
-}
-.pokemon-name {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    color: #333;
 }
 
 .pokemon-info {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    color: #555;
-}
-
-.pokemon-info span {
-    font-weight: bold
-}
-
-.pokemon-stats {
-    font-family: 'Montserrat', sans-serif;
-    list-style: none;
-    padding: 0;
-    font-size: 14px;
-    color: #777;
-}
-
-.pokemon-stats li {
-    margin: 4px 0;}
-
-
-.pokemon-card .content {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 1.4;
-    color: #333;
-    gap: 18px;
-    position: absolute;
-    top: 250px;
-    width: 100%;
-    padding: 0px 30px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
     text-align: center;
-    height: 30px;
-    overflow: hidden;
-    transition: 0.5s;
 }
 
-.pokemon-card:hover .content {
-    top: 130px;
-    height: 250px;
-}
-
-.pokemon-card .read-more {
-    background: linear-gradient(90deg, #3730a3, #7e22ce);
-    padding: 12px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-}

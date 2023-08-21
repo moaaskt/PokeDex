@@ -2,125 +2,22 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
+    <title>PokeAPI Interface</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <title>PokeAPI</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-success fixed-top">
-        <div class="container-fluid">
-            
-          <a class="navbar-brand" href="index.html">PokeAPI</a>
-         
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://github.com/moaaskt/PokeDex" target="_blank">Repositório do projeto</a>
-                </li>
-                
-                <li class="nav-item dropdown">               
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Pesquisa avançada
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                    
-                        <div class="stat-filter">
-                          <label for="statSelect">Stat:</label>
-                          <select id="statSelect">
-                              <!-- Opções para estatísticas -->
-                              <option value="hp">HP</option>
-                              <option value="attack">Attack</option>
-                              <option value="defense">Defense</option>
-                              <option value="special-attack">Special Attack</option>
-                              <option value="special-defense">Special Defense</option>
-                              <option value="speed">Speed</option>
-                          </select>
-                          <label for="comparisonSelect">Comparison:</label>
-                          <select id="comparisonSelect">
-                              <option value="=">=</option>
-                              <option value=">">></option>
-                              <option value="<"><</option>
-                          </select>
-                          <label for="valueInput">Value:</label>
-                          <input type="number" id="valueInput">
-                          <button id="filterButton" class="btn btn-primary">Filter</button>
-                      </div>
-                      
-                    </ul>
-                    
-                <li class="nav-item dropdown">               
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Pesquisar por tipo
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <div class="advanced-search">
-                        <!-- ... (outros elementos do filtro avançado) ... -->
-                        <label for="pokemonType">Type:</label>
-                        <select id="pokemonType">
-                            <option value="all">All</option>
-                            <option value="grass">Grass</option>
-                            <option value="fire">Fire</option>
-                            <option value="water">Water</option>
-                            <!-- Adicione mais tipos aqui -->
-                        </select>
-                        <button id="advancedSearchButton"  class="btn btn-primary">Search</button>
-                    </div>
-                  
-                </ul>
-            </li>
-            <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" id="searchInput" placeholder="Procure seu pokemon" aria-label="Search">
-                <button class="btn btn-success" type="submit"> <i class="fas fa-search"></i></button>
-            </form>
-            </div>
-              </ul>
-             
-            </div>
-          </div>
+    <div class="container">
+     
+        <h1><img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt=""></h1>
+        <div class="pokemon-container">
+          <div class="pokemon-list"></div>
+
+            <!-- Aqui serão exibidas as informações do pokémon -->
         </div>
-      </nav>
     </div>
+    <script src="scripts/displaypokemon.js"></script>
+    <script src="scripts/script.js"></script>
 
-
-      <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="pokemon-list">
-                    
-                </div>
-               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="not-found-message"></div>
-                    <div class="load-more-trigger"></div>
-                    <!-- Itens da lista de pokémons serão inseridos aqui pelo JavaScript -->
-                
-        </div>
-
-        <script src="scripts/api.js"></script>
-        <script src="scripts/pokemon.js"></script>
-        <script src="scripts/search.js"></script>
-        <script src="scripts/main.js"></script>
-    <!-- <script src="scripts/script.js"></script> -->
 </body>
 </html>
